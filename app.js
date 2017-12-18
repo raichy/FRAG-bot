@@ -1,7 +1,8 @@
 // Izsaucam paketes
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const config = require("./config.json");
+//const config = require("./config.json");
+const prefix = '!';
 
 // Listener Event: On Bot launched
 bot.on('ready', () => {
@@ -12,10 +13,10 @@ bot.on('ready', () => {
 // Listener Event: vienmēr nostrādās, kad tiks saņemts ziņojums
 bot.on('message', (message) =>{
 
-    if (!message.content.startsWith(config.prefix) || message.author.bot) return;
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     // Mainīgie
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g); // Nogrieām prefiksu, sadalam rindu vadoties pēc tukšumiem
+    const args = message.content.slice(prefix.length).trim().split(/ +/g); // Nogrieām prefiksu, sadalam rindu vadoties pēc tukšumiem
     const command = args.shift().toLowerCase();
 
     // Komanda RAND  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
