@@ -1,0 +1,13 @@
+{
+  "name": "FRAG bot",
+  "description": "Discord bot",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
+  }
+}
